@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loginActions } from "../../store/loginSlice";
 
 function DeleteUserAccount() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);

@@ -8,7 +8,7 @@ import { rejectedLoanActions } from "../../../store/rejectedLoanSlice";
 
 
 function ViewAllRejectedLoans() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const dispatch = useDispatch();
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2','#F6D6F6','#DCEBFF','#FFF2E2','#F5E5E4','#FAF5EF','#ECECEC'];
     let [rejectedLoanCount, setRejectedLoanCount] = useState(false);

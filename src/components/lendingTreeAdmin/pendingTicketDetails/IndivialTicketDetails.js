@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { MdDone } from "react-icons/md";
 import { loadingActions } from "../../../store/loadingSlice";
 function IndivialTicketDetails() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const { register, handleSubmit, formState: { errors } } = useForm();
     let history = useHistory();
     let dispatch = useDispatch();

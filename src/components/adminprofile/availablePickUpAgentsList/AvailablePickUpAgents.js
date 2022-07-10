@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 function AvailablePickUpAgents() {
     const dispatch = useDispatch();
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let history = useHistory();
     let [availablePickUpAgent, setAvailablePickUpAgent] = useState(false);
     const [agentRecords, setAgentRecords] = useState([]);

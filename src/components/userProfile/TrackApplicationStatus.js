@@ -8,7 +8,7 @@ import { FaRegLaugh } from "react-icons/fa";
 import { loadingActions } from "../../store/loadingSlice";
 
 function TrackApplicationStatus() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const link = "text-decoration-none";
     const dispatch = useDispatch();
     let [appliedLoans, setAppliedLoans] = useState(false);

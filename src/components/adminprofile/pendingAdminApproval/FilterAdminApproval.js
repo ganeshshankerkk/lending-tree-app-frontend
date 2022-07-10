@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import AvailablePickUpAgents from "../availablePickUpAgentsList/AvailablePickUpAgents";
 import { loadingActions } from "../../../store/loadingSlice";
 function FilterAdminApproval() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);

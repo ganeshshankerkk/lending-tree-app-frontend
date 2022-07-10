@@ -7,7 +7,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import { filterTicketDataActions } from "../../../store/filterTicketDataSlice";
 
 function AllPendingTickets(){
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const dispatch = useDispatch();
     let [ticketCount, setTicketCount] = useState(false);
     const [pendingTickets, setPendingTickets] = useState([]);

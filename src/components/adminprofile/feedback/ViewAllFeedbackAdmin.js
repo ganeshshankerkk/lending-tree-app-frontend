@@ -8,7 +8,7 @@ import { feedbackActions } from "../../../store/adminFeedbackSlice";
 
 function ViewAllFeedbackAdmin() {
     const dispatch = useDispatch();
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let [feedbackCount, setFeedbackCount] = useState(false);
     const [feedbackRecords, setFeedbackRecords] = useState([]);
     const loadingData = useSelector(state => state.loadingState.isLoading);

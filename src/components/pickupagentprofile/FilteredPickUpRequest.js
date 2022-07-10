@@ -8,7 +8,7 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import { loadingActions } from "../../store/loadingSlice";
 function FilteredPickUpRequest() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let history = useHistory();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
     const filteredLoanDataById = useSelector(state => state.filterLoan.filteredLoanDataById);

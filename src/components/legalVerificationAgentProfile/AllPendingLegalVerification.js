@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { BsCardList } from "react-icons/bs";
 import { loadingActions } from "../../store/loadingSlice";
 function AllPendingLegalVerification() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const dispatch = useDispatch();
     let [pendingApprovalRequest, setPendingApprovalRequest] = useState(false);
     const [pendingLoanDetails, setPendingLoanDetails] = useState([]);

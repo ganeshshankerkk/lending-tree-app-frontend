@@ -6,7 +6,7 @@ import { BsCardList } from "react-icons/bs";
 import { loadingActions } from "../../store/loadingSlice";
 import { filterTicketActions } from "../../store/filterTicketSlice";
 function SupportTicketStatus() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const dispatch = useDispatch();
     let [ticketCount, setTicketCount] = useState(false);
     const [pendingTickets, setPendingTickets] = useState([]);

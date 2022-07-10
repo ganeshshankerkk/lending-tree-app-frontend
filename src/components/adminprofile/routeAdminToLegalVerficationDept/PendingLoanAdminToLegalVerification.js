@@ -7,7 +7,7 @@ import { filterAppAgencyLoanActions } from "../../../store/filterApprovalAgencyA
 import { loadingActions } from "../../../store/loadingSlice";
 
 function PendingLoanAdminToLegalVerification() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const dispatch = useDispatch();
     let [pendingApprovalRequest, setPendingApprovalRequest] = useState(false);
     const [pendingLoanDetails, setPendingLoanDetails] = useState([]);

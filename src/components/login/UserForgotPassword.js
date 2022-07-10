@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from "react-router-dom";
 import { ImArrowLeft2 } from "react-icons/im";
 function UserForgotPassword() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>

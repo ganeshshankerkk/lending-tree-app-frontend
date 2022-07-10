@@ -8,7 +8,7 @@ import { loadingActions } from "../../store/loadingSlice";
 import { loginActions } from "../../store/loginSlice";
 import './AgentLogin.css';
 function AgentLogin() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>

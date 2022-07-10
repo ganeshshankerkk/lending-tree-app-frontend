@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
 function AgentRegistration() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     let history= useHistory();
     const [idisValid, setIdIsValid] = useState(false);
     const [emailIsValid, setEmailIsValid] = useState(false);

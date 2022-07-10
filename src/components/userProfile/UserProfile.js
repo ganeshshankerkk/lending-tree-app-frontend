@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterFeedbackActions } from "../../store/filterFeedbackSlice";
 
 function UserProfile() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     let dispatch = useDispatch();
     let [approvedLoans, setApprovedLoans] = useState(false);

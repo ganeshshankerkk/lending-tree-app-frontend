@@ -8,7 +8,7 @@ import { loginActions } from "../../store/loginSlice";
 function UserLogin() {
     let history = useHistory();
     let dispatch = useDispatch();
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const loadingData = useSelector(state => state.loadingState.isLoading);
 
     const { register, handleSubmit, formState: { errors } } = useForm();

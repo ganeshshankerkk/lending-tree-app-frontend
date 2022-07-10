@@ -7,7 +7,7 @@ import { filterAppAgencyLoanActions } from "../../../store/filterApprovalAgencyA
 import { loadingActions } from "../../../store/loadingSlice";
 
 function LegallyVerifiedLoans(){
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     const dispatch = useDispatch();
     let [completedLoanRequests, setCompletedLoanRequests] = useState(false);
     const [legallyVerifiedLoanRequests, setLegallyVerifiedLoanRequests] = useState([]);

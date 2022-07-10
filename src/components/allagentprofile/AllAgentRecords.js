@@ -5,7 +5,7 @@ import DeleteAgentAccount from "./DeleteAgentAccount";
 function AllAgentRecords() {
     const userid = useSelector(state => state.loginState.loggedAgentRecord.id);
     const [fullRecords, setUserRecords] = useState({});
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "https://lending-tree-app.herokuapp.com";
     useEffect(() => {
         fetch(URI+'/userid=' + userid + "/")
             .then(response => {
