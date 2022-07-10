@@ -29,7 +29,7 @@ function About() {
             </p>
             <div className="text-center mx-auto">
             <p className="display-5" >Work flow</p>
-            <iframe align="center" src="https://drive.google.com/file/d/1knFhvmDKsu6yWqeCib-gEL1wjDbCQkFT/preview" width="640" height="480" allow="autoplay"></iframe>
+            <iframe align="center" src="https://drive.google.com/file/d/1knFhvmDKsu6yWqeCib-gEL1wjDbCQkFT/preview" width="640" height="480" title="Lending Tree app Work flow diagram" allow="autoplay"></iframe>
           
           </div>
             </div>
