@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import './UnAuthorized.css'
 function UnAuthorized() {
-    const URI = "https://lending-tree-web-app.herokuapp.com/";
+    const URI = "/";
     const link = "text-decoration-none"
     return (
         <Fragment>

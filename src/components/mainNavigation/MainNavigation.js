@@ -3,8 +3,7 @@ import { RiUser6Line } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
 import { FaRupeeSign } from "react-icons/fa";
-
-
+import { FaHandsHelping } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useHistory } from "react-router-dom";
 import { adminLoginActions } from "../../store/adminloginSlice";
@@ -72,6 +71,8 @@ function MainNavigation() {
                     </div>
                     <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
                         <ul className="nav  ml-auto mx-5">
+                            {/* About */}
+                            <NavLink activeclassname="navActive" to='/about' className={link}> <FaHandsHelping /> About</NavLink>
                             {/* LOGIN */}
                             {!userLoggedIn && !approvalAgencyLoggedIn && !agencyAdminLoggedIn &&
                                 !pickUpAgentSignedIn && !personVerificationAgentLoggedIn && !lendingTreeAdminLogIn && !legalVerificationAgentLoggedIn &&

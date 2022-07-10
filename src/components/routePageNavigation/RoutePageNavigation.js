@@ -59,6 +59,7 @@ import NewLoans from "../lendingTreeAdmin/reports/NewLoans";
 import FilterNewLoan from "../lendingTreeAdmin/reports/FilterNewLoan";
 import ApprovedLoan from "../lendingTreeAdmin/reports/ApprovedLoan";
 import FilterApprovedLoan from "../lendingTreeAdmin/reports/FilterApprovedLoan";
+import About from "../../pages/About";
 
 function RoutePageNavigation() {
     const userLoginHandler = useSelector(state => state.loginState.isLoggedIn);
@@ -253,6 +254,9 @@ function RoutePageNavigation() {
                 </Route>
                 <Route path ="/contact">
                     <Contact/>
+                </Route>
+                <Route path ="/about">
+                    <About/>
                 </Route>
                 <Route path="*">
                     <UnAuthorized />
