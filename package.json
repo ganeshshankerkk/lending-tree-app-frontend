@@ -2,6 +2,7 @@
   "name": "lending-tree-app",
   "version": "0.1.0",
   "private": true,
+   "type":"module",
   "dependencies": {
     "@fontsource/roboto": "^4.5.0",
     "@reduxjs/toolkit": "^1.6.1",
