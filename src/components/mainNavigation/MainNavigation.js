@@ -11,7 +11,7 @@ import { adminLoginActions } from "../../store/adminloginSlice";
 import { loginActions } from "../../store/loginSlice";
 import './MainNavigation.css'
 function MainNavigation() {
-    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const URI = "/";
     let history = useHistory();
     const userLoggedIn = useSelector(state => state.loginState.isLoggedIn)
     const approvalAgencyLoggedIn = useSelector(state => state.loginState.isAgencyLogggedIn)
