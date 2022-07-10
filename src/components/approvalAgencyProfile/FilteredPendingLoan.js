@@ -6,6 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 function FilteredPendingLoan() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
     const filteredLoanDataById = useSelector(state => state.filterLoan.filteredLoanDataById);
@@ -18,7 +19,7 @@ function FilteredPendingLoan() {
         const id = filteredLoanDataById.map((userId) => {
             return userId.loanId;
         })
-        fetch("http://localhost:8897/approvingagency/" + id, {
+        fetch(URI+"/approvingagency/" + id, {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(id)
@@ -38,7 +39,7 @@ function FilteredPendingLoan() {
             return loanId.loanId;
         })
         let response = {loanId,remarks}
-        fetch("http://localhost:8897/rejectloan/id=" + loanId + "/remarks=" + remarks + "/", {
+        fetch(URI+"/rejectloan/id=" + loanId + "/remarks=" + remarks + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

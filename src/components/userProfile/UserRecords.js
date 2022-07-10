@@ -3,11 +3,12 @@ import { useSelector } from "react-redux";
 import { RiUser6Line } from 'react-icons/ri';
 import DeleteUserAccount from "../deleteAccount/DeleteUserAccount";
 function UserRecords() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     const [fullRecords, setUserRecords] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:8897/userid=' + userid + "/")
+        fetch(URI+'/userid=' + userid + "/")
             .then(response => {
                 return response.json();
             })

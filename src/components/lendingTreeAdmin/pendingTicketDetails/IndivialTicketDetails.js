@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { MdDone } from "react-icons/md";
 import { loadingActions } from "../../../store/loadingSlice";
 function IndivialTicketDetails() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const { register, handleSubmit, formState: { errors } } = useForm();
     let history = useHistory();
     let dispatch = useDispatch();
@@ -22,7 +23,7 @@ function IndivialTicketDetails() {
         })
         let response = { ticketId, remarks }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/resolve/ticketid=" + ticketId + "/remarks=" + remarks + "/", {
+        fetch(URI+"/resolve/ticketid=" + ticketId + "/remarks=" + remarks + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 
 function AvailableVerificationDeptAgents() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const dispatch = useDispatch();
     let history = useHistory();
     let [verificationAgent, setVerificationAgent] = useState(false);
@@ -14,7 +15,7 @@ function AvailableVerificationDeptAgents() {
     const getLoanId = useSelector(state => state.filterAppAgencyLoan.filteredLoanDataById);
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/verification-agents/')
+        fetch(URI+'/verification-agents/')
             .then(response => {
                 return response.json();
             })
@@ -49,7 +50,7 @@ function AvailableVerificationDeptAgents() {
         })
         const assignToVerificationDept = { loanId, agentId };
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/assign-verification/loanid=" + loanId + "/agentid=" + agentId + "/", {
+        fetch(URI+"/assign-verification/loanid=" + loanId + "/agentid=" + agentId + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(assignToVerificationDept)

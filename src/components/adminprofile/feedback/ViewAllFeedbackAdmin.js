@@ -8,13 +8,14 @@ import { feedbackActions } from "../../../store/adminFeedbackSlice";
 
 function ViewAllFeedbackAdmin() {
     const dispatch = useDispatch();
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let [feedbackCount, setFeedbackCount] = useState(false);
     const [feedbackRecords, setFeedbackRecords] = useState([]);
     const loadingData = useSelector(state => state.loadingState.isLoading);
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2','#F6D6F6','#DCEBFF','#FFF2E2','#F5E5E4','#FAF5EF','#ECECEC'];
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/feedback/all')
+        fetch(URI+'/feedback/all')
             .then(response => {
                 return response.json();
             })

@@ -8,6 +8,7 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import { loadingActions } from "../../store/loadingSlice";
 function FilteredPersonVerificationRequest() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
     const filteredLoanDataById = useSelector(state => state.filterLoan.filteredLoanDataById);
@@ -24,7 +25,7 @@ function FilteredPersonVerificationRequest() {
             return user.id;
         })
         const userId = userid.toString();
-        fetch('http://localhost:8897/userrecords/id=' + userId + "/")
+        fetch(URI+'/userrecords/id=' + userId + "/")
             .then(response => {
                 return response.json();
             })
@@ -42,7 +43,7 @@ function FilteredPersonVerificationRequest() {
         const id = filteredLoanDataById.map((userId) => {
             return userId.loanId;
         })
-        fetch("http://localhost:8897/personverification/approveloan=" + id + "/agentid=" + agentid + "/", {
+        fetch(URI+"/personverification/approveloan=" + id + "/agentid=" + agentid + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(id)
@@ -63,7 +64,7 @@ function FilteredPersonVerificationRequest() {
         })
         let response = { loanId, remarks }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/personverification/rejectloanid=" + loanId + "/remarks=" + remarks + "/agentid=" + agentid + "/", {
+        fetch(URI+"/personverification/rejectloanid=" + loanId + "/remarks=" + remarks + "/agentid=" + agentid + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

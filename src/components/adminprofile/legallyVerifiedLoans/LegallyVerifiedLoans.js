@@ -7,13 +7,14 @@ import { filterAppAgencyLoanActions } from "../../../store/filterApprovalAgencyA
 import { loadingActions } from "../../../store/loadingSlice";
 
 function LegallyVerifiedLoans(){
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const dispatch = useDispatch();
     let [completedLoanRequests, setCompletedLoanRequests] = useState(false);
     const [legallyVerifiedLoanRequests, setLegallyVerifiedLoanRequests] = useState([]);
     const loadingData = useSelector(state => state.loadingState.isLoading);
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/loans/approved')
+        fetch(URI+'/loans/approved')
             .then(response => {
                 return response.json();
             })

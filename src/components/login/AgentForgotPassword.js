@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { ImArrowLeft2 } from "react-icons/im";
 
 function AgentForgotPassword() {
-
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>
@@ -18,7 +18,7 @@ function AgentForgotPassword() {
         let givenNickname = postUserRecords.childhoodNickname
         let category = postUserRecords.category;
         const response = { givenid, givenNickname, givenfriend, givenCity }
-        fetch("http://localhost:8897/id=" + givenid + "/category=" + category + "/nickname=" + givenNickname + "/friend=" + givenfriend + "/city=" + givenCity + "/", {
+        fetch(URI+"/id=" + givenid + "/category=" + category + "/nickname=" + givenNickname + "/friend=" + givenfriend + "/city=" + givenCity + "/", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)
@@ -42,7 +42,7 @@ function AgentForgotPassword() {
     function changePassword(newPassword) {
         let password = newPassword.password
         const response = { id, password }
-        fetch("http://localhost:8897/userid=" + id + "/new-password=" + password + "/category=" + givenAgentCategory +"/", {
+        fetch(URI+"/userid=" + id + "/new-password=" + password + "/category=" + givenAgentCategory +"/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

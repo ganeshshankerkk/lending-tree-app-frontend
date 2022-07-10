@@ -61,7 +61,7 @@ import ApprovedLoan from "../lendingTreeAdmin/reports/ApprovedLoan";
 import FilterApprovedLoan from "../lendingTreeAdmin/reports/FilterApprovedLoan";
 
 function RoutePageNavigation() {
-    
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const userLoginHandler = useSelector(state => state.loginState.isLoggedIn);
     const approvalAgencyLoginHandler = useSelector(state => state.loginState.isAgencyLogggedIn);
     const agentLoginDynamicProfile = useSelector(state => state.loginState.agentLoggedInProfile);
@@ -71,9 +71,10 @@ function RoutePageNavigation() {
     const legalAgentLoggedInHandler = useSelector(state => state.loginState.isLegalAgentLoggedIn);
     const lendingTreeAdminLogInHandler = useSelector(state => state.adminLoginState.isLendingTreeAdminLoggedIn);
     return (
+        
         <Fragment>
             <Switch>
-                <Route path="/" exact>
+                <Route path={URI} exact>
                     <HomePage/>
                 </Route>
                 <Route path="/register">

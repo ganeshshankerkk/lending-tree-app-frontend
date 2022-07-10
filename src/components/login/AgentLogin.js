@@ -8,6 +8,7 @@ import { loadingActions } from "../../store/loadingSlice";
 import { loginActions } from "../../store/loginSlice";
 import './AgentLogin.css';
 function AgentLogin() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>
@@ -19,7 +20,7 @@ function AgentLogin() {
         const givenCategory = postUserRecords.category;
         const givenLoginData = {id,givenPassword,givenCategory}
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/agentid=" + id +"/password=" + givenPassword + "/category=" + givenCategory + "/", {
+        fetch(URI+"/agentid=" + id +"/password=" + givenPassword + "/category=" + givenCategory + "/", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(givenLoginData)

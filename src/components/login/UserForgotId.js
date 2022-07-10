@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { useForm } from 'react-hook-form';
 import { Link } from "react-router-dom";
 function UserForgotId() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>
     const [userId, setUserId] = useState();
@@ -12,7 +13,7 @@ function UserForgotId() {
         let givenCity = postUserRecords.cityBornIn;
         let givenNickname = postUserRecords.childhoodNickname
         const response = { givenEmail, givenNickname, givenfriend, givenCity }
-        fetch("http://localhost:8897/email=" + givenEmail + "/nickname=" + givenNickname + "/friend=" + givenfriend + "/city=" + givenCity + "/", {
+        fetch(URI+"/email=" + givenEmail + "/nickname=" + givenNickname + "/friend=" + givenfriend + "/city=" + givenCity + "/", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

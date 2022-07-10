@@ -8,6 +8,7 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import { loadingActions } from "../../store/loadingSlice";
 function FilteredPickUpRequest() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
     const filteredLoanDataById = useSelector(state => state.filterLoan.filteredLoanDataById);
@@ -20,7 +21,7 @@ function FilteredPickUpRequest() {
         const id = filteredLoanDataById.map((userId) => {
             return userId.loanId;
         })
-        fetch("http://localhost:8897/pickup/approveloan=" + id +"/agentid="+ agentid +"/", {
+        fetch(URI+"/pickup/approveloan=" + id +"/agentid="+ agentid +"/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(id)
@@ -41,7 +42,7 @@ function FilteredPickUpRequest() {
         })
         let response = { loanId, remarks }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/pickup/rejectloanid=" + loanId + "/remarks=" + remarks + "/agentid="+ agentid +"/", {
+        fetch(URI+"/pickup/rejectloanid=" + loanId + "/remarks=" + remarks + "/agentid="+ agentid +"/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

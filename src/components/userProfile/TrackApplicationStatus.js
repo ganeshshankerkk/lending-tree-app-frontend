@@ -8,7 +8,8 @@ import { FaRegLaugh } from "react-icons/fa";
 import { loadingActions } from "../../store/loadingSlice";
 
 function TrackApplicationStatus() {
-    const link = "text-decoration-none"
+    const URI = "https://lending-tree-web-app.herokuapp.com";
+    const link = "text-decoration-none";
     const dispatch = useDispatch();
     let [appliedLoans, setAppliedLoans] = useState(false);
     const [appliedLoanDetails, setAppliedLoanDetails] = useState([]);
@@ -17,7 +18,7 @@ function TrackApplicationStatus() {
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2', '#F6D6F6', '#DCEBFF', '#FFF2E2', '#F5E5E4', '#FAF5EF', '#ECECEC'];
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/tracking/id=' + userId + '/')
+        fetch(URI_+'/tracking/id=' + userId + '/')
             .then(response => {
                 return response.json();
             })

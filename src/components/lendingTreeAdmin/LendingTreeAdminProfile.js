@@ -5,6 +5,7 @@ import reports from '../../images/reports.jpg'
 import approvedTicket from '../../images/approvedTicket.jpg'
 import help from '../../images/help.png'
 function LendingTreeAdminProfile() {
+
     let history = useHistory();
     function viewTickets() {
         history.push('/pending-tickets');

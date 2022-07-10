@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
 function AgentRegistration() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history= useHistory();
     const [idisValid, setIdIsValid] = useState(false);
     const [emailIsValid, setEmailIsValid] = useState(false);
@@ -12,7 +13,7 @@ function AgentRegistration() {
     const required = <span className="text-danger">*</span>
 
     const onRegistrationFormSubmit = (agentRecords) => {
-        fetch("http://localhost:8897/register/user", {
+        fetch(URI+"/register/user", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(agentRecords)
@@ -104,7 +105,7 @@ function AgentRegistration() {
                                 pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                                 validate: {
                                     checkUrl: function checkEmailId(givenEmail) {
-                                        fetch("http://localhost:8897/agentemail=" + givenEmail + '/', {
+                                        fetch(URI+"/agentemail=" + givenEmail + '/', {
                                             method: "POST",
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify(givenEmail)
@@ -169,7 +170,7 @@ function AgentRegistration() {
                                 pattern: /^[0-9]+$/g,
                                 validate: {
                                     checkUrl: function checkEmailId(givenagentId) {
-                                        fetch("http://localhost:8897/agentid=" + givenagentId + '/', {
+                                        fetch(URI+"/agentid=" + givenagentId + '/', {
                                             method: "POST",
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify(givenagentId)

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { BsCardList } from "react-icons/bs";
 import { loadingActions } from "../../store/loadingSlice";
 function AllPendingLegalVerification() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const dispatch = useDispatch();
     let [pendingApprovalRequest, setPendingApprovalRequest] = useState(false);
     const [pendingLoanDetails, setPendingLoanDetails] = useState([]);
@@ -13,7 +14,7 @@ function AllPendingLegalVerification() {
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2','#F6D6F6','#DCEBFF','#FFF2E2','#F5E5E4','#FAF5EF','#ECECEC'];
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/pending/legal-verification/agentid=' + agentId + '/')
+        fetch(URI+'/pending/legal-verification/agentid=' + agentId + '/')
             .then(response => {
                 return response.json();
             })

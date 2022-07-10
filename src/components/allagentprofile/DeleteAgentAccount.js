@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loginActions } from "../../store/loginSlice";
 
 function DeleteAgentAccount() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const agentid = useSelector(state => state.loginState.loggedAgentRecord.id);
@@ -12,7 +13,7 @@ function DeleteAgentAccount() {
     function deleteAgentHandler() {
         let response = window.confirm("This action cannot be undone. Are you sure you want to permanently delete your account?")
         if (response) {
-            fetch("http://localhost:8897/deleteuser=" + agentid + "/", {
+            fetch(URI+"/deleteuser=" + agentid + "/", {
                 method: "DELETE",
             }).then(
                 () => {

@@ -7,12 +7,12 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import { loadingActions } from "../../../store/loadingSlice";
 function IndividualVerifiedLoanRecords() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
     const filteredLoanDataById = useSelector(state => state.filterAppAgencyLoan.filteredLoanDataById);
     const { register, handleSubmit, formState: { errors } } = useForm();
-
     const required = <span className="text-danger">*</span>
     const loadingData = useSelector(state => state.loadingState.isLoading);
 
@@ -22,7 +22,7 @@ function IndividualVerifiedLoanRecords() {
         })
         let response = { loanId}
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/approve/loan/id=" + loanId +"/", {
+        fetch(URI+"/approve/loan/id=" + loanId +"/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)
@@ -44,7 +44,7 @@ function IndividualVerifiedLoanRecords() {
         })
         let response = { loanId, remarks }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/reject/loan/id=" + loanId + "/remarks=" + remarks + "/", {
+        fetch(URI+"/reject/loan/id=" + loanId + "/remarks=" + remarks + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { FaArrowCircleRight } from 'react-icons/fa';
 import { useHistory } from "react-router-dom";
 function AdminLogin() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>
@@ -10,7 +11,7 @@ function AdminLogin() {
     const givenId = adminRecords.id;
     const givenPassword = adminRecords.password;
     const givenLoginData = { givenId, givenPassword }
-    fetch("http://localhost:8897/adminid=" + givenId + "/password=" + givenPassword +"/", {
+    fetch(URI+"/adminid=" + givenId + "/password=" + givenPassword +"/", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(givenLoginData)

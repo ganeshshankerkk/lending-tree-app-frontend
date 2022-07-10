@@ -7,13 +7,14 @@ import { filterAppAgencyLoanActions } from "../../../store/filterApprovalAgencyA
 import { loadingActions } from "../../../store/loadingSlice";
 
 function PendingLoanAdminToVerification() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const dispatch = useDispatch();
     let [pendingApprovalRequest, setPendingApprovalRequest] = useState(false);
     const [pendingLoanDetails, setPendingLoanDetails] = useState([]);
     const loadingData = useSelector(state => state.loadingState.isLoading);
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/pending-verification/')
+        fetch(URI+'/pending-verification/')
             .then(response => {
                 return response.json();
             })

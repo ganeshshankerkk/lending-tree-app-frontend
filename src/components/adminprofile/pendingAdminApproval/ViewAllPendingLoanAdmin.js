@@ -7,13 +7,14 @@ import { filterAppAgencyLoanActions } from "../../../store/filterApprovalAgencyA
 import { loadingActions } from "../../../store/loadingSlice";
 
 function ViewAllPendingLoanAdmin() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const dispatch = useDispatch();
     let [pendingApprovalRequest, setPendingApprovalRequest] = useState(false);
     const [pendingLoanDetails, setPendingLoanDetails] = useState([]);
     const loadingData = useSelector(state => state.loadingState.isLoading);
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/pending-admin-approval/')
+        fetch(URI+'/pending-admin-approval/')
             .then(response => {
                 return response.json();
             })

@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import './UserRegistration.css'
 
 function UserRegistration() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm({
         mode: "onBlur"
@@ -16,7 +17,7 @@ function UserRegistration() {
 
     const onRegistrationFormSubmit = (postUserRecords) => {
 
-        fetch("http://localhost:8897/register/user", {
+        fetch(URI+"/register/user", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(postUserRecords)
@@ -116,7 +117,7 @@ function UserRegistration() {
                                 pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                                 validate: {
                                     checkUrl: function checkEmailId(givenEmail) {
-                                        fetch("http://localhost:8897/email=" + givenEmail + '/', {
+                                        fetch(URI+"/email=" + givenEmail + '/', {
                                             method: "POST",
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify(givenEmail)
@@ -179,7 +180,7 @@ function UserRegistration() {
                                 pattern: /^[0-9]+$/g,
                                 validate: {
                                     checkUrl: function checkEmailId(givenUserId) {
-                                        fetch("http://localhost:8897/id=" + givenUserId + '/', {
+                                        fetch(URI+"/id=" + givenUserId + '/', {
                                             method: "POST",
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify(givenUserId)

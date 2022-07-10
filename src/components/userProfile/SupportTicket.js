@@ -5,6 +5,7 @@ import { GiTicket } from "react-icons/gi";
 import { useDispatch, useSelector } from "react-redux";
 import { loadingActions } from "../../store/loadingSlice";
 function SupportTicket() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     const dispatch = useDispatch();
     const loadingData = useSelector(state => state.loadingState.isLoading);
@@ -23,7 +24,7 @@ function SupportTicket() {
         const description = postUserRecords.description;
         const postData = { userid, title, date, description }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/ticket/", {
+        fetch(URI+"/ticket/", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(postData)

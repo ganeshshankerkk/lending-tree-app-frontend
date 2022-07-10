@@ -10,11 +10,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterFeedbackActions } from "../../store/filterFeedbackSlice";
 
 function UserProfile() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     let dispatch = useDispatch();
     let [approvedLoans, setApprovedLoans] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:8897/pending-feedback/userid='  + userid )
+        fetch(URI+'/pending-feedback/userid='  + userid )
             .then(response => {
                 return response.json();
             })

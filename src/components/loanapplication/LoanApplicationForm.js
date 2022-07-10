@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../store/loadingSlice";
 function LoanApplicationForm() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const userId = useSelector(state => state.loginState.loggedUserRecords.givenId);
@@ -28,7 +29,7 @@ function LoanApplicationForm() {
         let requestedDateTime = loanData.requestedDateTime;
         let monthlySalary = parseInt(loanData.monthlySalary);
         let saveData = { id, amount, tenure, requestedDateTime, interestRate, purpose, panNumber, monthlySalary };
-        fetch("http://localhost:8897/newloan", {
+        fetch(URI+"/newloan", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(saveData)

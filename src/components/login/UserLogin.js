@@ -8,7 +8,7 @@ import { loginActions } from "../../store/loginSlice";
 function UserLogin() {
     let history = useHistory();
     let dispatch = useDispatch();
-
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const loadingData = useSelector(state => state.loadingState.isLoading);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -20,7 +20,7 @@ function UserLogin() {
         const givenPassword = postUserRecords.password;
         const givenLoginData = { givenId, givenPassword }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/userid=" + givenId + "/userpassword=" + givenPassword + "/", {
+        fetch(URI+"/userid=" + givenId + "/userpassword=" + givenPassword + "/", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(givenLoginData)

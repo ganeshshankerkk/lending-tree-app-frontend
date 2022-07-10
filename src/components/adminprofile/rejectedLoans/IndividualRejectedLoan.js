@@ -7,6 +7,7 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import { loadingActions } from "../../../store/loadingSlice";
 function IndividualRejectedLoan(){
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
@@ -23,7 +24,7 @@ function IndividualRejectedLoan(){
         })
         let response = { loanId, remarks }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/admin/reject-loan/id=" + loanId + "/remarks=" + remarks + "/", {
+        fetch(URI+"/admin/reject-loan/id=" + loanId + "/remarks=" + remarks + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

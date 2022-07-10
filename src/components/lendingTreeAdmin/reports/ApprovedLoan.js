@@ -7,6 +7,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import { loanReportActions } from "../../../store/loanReportSlice";
 
 function ApprovedLoan() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const dispatch = useDispatch();
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2', '#F6D6F6', '#DCEBFF', '#FFF2E2', '#F5E5E4', '#FAF5EF', '#ECECEC'];
     let [newLoanCount, setNewLoanCound] = useState(false);
@@ -15,7 +16,7 @@ function ApprovedLoan() {
 
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/reports-approved/')
+        fetch(URI+'/reports-approved/')
             .then(response => {
                 return response.json();
             })

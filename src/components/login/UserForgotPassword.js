@@ -3,8 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from "react-router-dom";
 import { ImArrowLeft2 } from "react-icons/im";
 function UserForgotPassword() {
-
-
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>
@@ -17,7 +16,7 @@ function UserForgotPassword() {
         let givenCity = postUserRecords.cityBornIn;
         let givenNickname = postUserRecords.childhoodNickname
         const response = { givenid, givenNickname, givenfriend, givenCity }
-        fetch("http://localhost:8897/id=" + givenid + "/nickname=" + givenNickname + "/friend=" + givenfriend + "/city=" + givenCity + "/", {
+        fetch(URI+"/id=" + givenid + "/nickname=" + givenNickname + "/friend=" + givenfriend + "/city=" + givenCity + "/", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)
@@ -40,7 +39,7 @@ function UserForgotPassword() {
     function changePassword(newPassword) {
         let password = newPassword.password
         const response = {id,password}
-        fetch("http://localhost:8897/userid=" + id + "/new-password=" + password  + "/", {
+        fetch(URI+"/userid=" + id + "/new-password=" + password  + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

@@ -11,6 +11,7 @@ import { adminLoginActions } from "../../store/adminloginSlice";
 import { loginActions } from "../../store/loginSlice";
 import './MainNavigation.css'
 function MainNavigation() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     const userLoggedIn = useSelector(state => state.loginState.isLoggedIn)
     const approvalAgencyLoggedIn = useSelector(state => state.loginState.isAgencyLogggedIn)
@@ -27,35 +28,35 @@ function MainNavigation() {
     function logoutHandler() {
         if (userLoggedIn) {
             dispatch(loginActions.logoutSate());
-            history.replace("/");
+            history.replace(URI);
         }
         if (approvalAgencyLoggedIn) {
             dispatch(loginActions.approvalAgencyLoggedOut());
-            history.replace("/");
+            history.replace(URI);
         }
         if (agentLoggedInProfilePage) {
             dispatch(loginActions.agentLoggedOutProfile());
-            history.replace("/");
+            history.replace(URI);
         }
         if (agencyAdminLoggedIn) {
             dispatch(loginActions.agencyAdminLoggedOutState())
-            history.replace("/");
+            history.replace(URI);
         }
         if (pickUpAgentSignedIn) {
             dispatch(loginActions.pickupLoggedOut())
-            history.replace("/");
+            history.replace(URI);
         }
         if (personVerificationAgentLoggedIn) {
             dispatch(loginActions.personVerificationDepartmentLoggedOut())
-            history.replace("/");
+            history.replace(URI);
         }
         if (legalVerificationAgentLoggedIn) {
             dispatch(loginActions.legalAgentLoggedOut())
-            history.replace("/");
+            history.replace(URI);
         }
         if (lendingTreeAdminLogIn) {
             dispatch(adminLoginActions.lendingTreeAdminLoggedOut())
-            history.replace("/");
+            history.replace(URI);
         }
     }
     return (
@@ -65,7 +66,7 @@ function MainNavigation() {
                     <div className="navbar-collapse collapse w-100 order-1 order-sm-0 dual-collapse2">
                         <ul className="navbar-nav mr-auto mx-5">
                             <li className="nav-item active">
-                                <NavLink className="navbar-brand" to='/' ><FaRupeeSign/> Lending Tree</NavLink>
+                                <NavLink className="navbar-brand" to={URI} ><FaRupeeSign/> Lending Tree</NavLink>
                             </li>
                         </ul>
                     </div>

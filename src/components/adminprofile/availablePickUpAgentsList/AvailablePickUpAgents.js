@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 function AvailablePickUpAgents() {
     const dispatch = useDispatch();
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     let [availablePickUpAgent, setAvailablePickUpAgent] = useState(false);
     const [agentRecords, setAgentRecords] = useState([]);
@@ -13,7 +14,7 @@ function AvailablePickUpAgents() {
     const getLoanId = useSelector(state => state.filterAppAgencyLoan.filteredLoanDataById);
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/pickupagents/')
+        fetch(URI+'/pickupagents/')
             .then(response => {
                 return response.json();
             })
@@ -48,7 +49,7 @@ function AvailablePickUpAgents() {
         })
         const assignToPickUp = { loanId, individualAgentId };
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/routetopickup/loanid=" + loanId + "/agentid=" + individualAgentId + "/", {
+        fetch(URI+"/routetopickup/loanid=" + loanId + "/agentid=" + individualAgentId + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(assignToPickUp)

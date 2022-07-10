@@ -9,6 +9,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import AvailableLegalVerificationAgents from "./AvailableLegalVerificationAgents";
 
 function IndividualRecordsPendingAdminApproval() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
@@ -29,7 +30,7 @@ function IndividualRecordsPendingAdminApproval() {
         })
         let response = { loanId, remarks }
         dispatch(loadingActions.dataIsLoading());
-        fetch("http://localhost:8897/reject-pending-loan-admin/id=" + loanId + "/remarks=" + remarks + "/", {
+        fetch(URI+"/reject-pending-loan-admin/id=" + loanId + "/remarks=" + remarks + "/", {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)

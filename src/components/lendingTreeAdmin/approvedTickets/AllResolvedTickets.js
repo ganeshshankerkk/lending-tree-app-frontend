@@ -7,6 +7,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import { filterTicketDataActions } from "../../../store/filterTicketDataSlice";
 
 function AllResolvedTickets() {
+    const URI = "https://lending-tree-web-app.herokuapp.com";
     const dispatch = useDispatch();
     let [ticketCount, setTicketCount] = useState(false);
     const [resolvedTickets, setResolvedTickets] = useState([]);
@@ -14,7 +15,7 @@ function AllResolvedTickets() {
     const loadingData = useSelector(state => state.loadingState.isLoading);
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch('http://localhost:8897/resolved-tickets/')
+        fetch(URI+'/resolved-tickets/')
             .then(response => {
                 return response.json();
             })
