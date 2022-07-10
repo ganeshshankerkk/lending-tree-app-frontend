@@ -18,7 +18,7 @@ function TrackApplicationStatus() {
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2', '#F6D6F6', '#DCEBFF', '#FFF2E2', '#F5E5E4', '#FAF5EF', '#ECECEC'];
     useEffect(() => {
         dispatch(loadingActions.dataIsLoading());
-        fetch(URI_+'/tracking/id=' + userId + '/')
+        fetch(URI+'/tracking/id=' + userId + '/')
             .then(response => {
                 return response.json();
             })
