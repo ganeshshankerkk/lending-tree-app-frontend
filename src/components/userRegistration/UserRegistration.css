@@ -1,0 +1,4 @@
+.form-control.invalid {
+    border-color: solid red;
+    background: #fff2f2;
+}

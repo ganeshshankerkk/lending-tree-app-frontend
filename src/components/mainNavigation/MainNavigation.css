@@ -1,0 +1,14 @@
+.navLink {
+color: rgb(228, 228, 228);
+text-decoration: none;
+margin-right:2.4rem;
+font-size: 20px;
+}
+.navLink:hover {
+    color: white;
+    font-weight: 600;
+}
+.navActive{
+    color: white;
+    font-weight: 600;
+}

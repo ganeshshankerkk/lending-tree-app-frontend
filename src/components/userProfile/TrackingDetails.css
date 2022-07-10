@@ -1,0 +1,9 @@
+.status-style {
+    text-align: center;
+    font-size: 20px;
+}
+@media print {
+    .noprint {
+       visibility: hidden;
+    }
+ }
