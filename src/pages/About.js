@@ -10,7 +10,7 @@ function About() {
             <p className="display-5" >About Lending Tree</p>
           </div>
         </div>
-        <div className="row col-lg-6 col-sm-6 mx-auto text-center w-50 my-3">
+        <div className="row col-lg-6 col-sm-12 mx-auto text-center my-3">
           <div className="btn-group" role="group">
             <button type="button" className="btn btn-success btn-sm mx-1">Java Spring Boot</button>
             <button type="button" className="btn btn-success btn-sm mx-1">MySQL</button>
