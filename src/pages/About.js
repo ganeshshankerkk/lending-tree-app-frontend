@@ -28,11 +28,12 @@ function About() {
               </ol>
             </p>
             <div className="text-center mx-auto">
-            <p className="display-5" >Work flow</p>
-            <iframe align="center" src="https://drive.google.com/file/d/1knFhvmDKsu6yWqeCib-gEL1wjDbCQkFT/preview" width="640" height="480" title="Lending Tree app Work flow diagram" allow="autoplay"></iframe>
-          
-          </div>
+              <p className="display-5" >Work flow</p>
+              <div className="embed-responsive embed-responsive-16by9">
+                <iframe align="center" className="embed-responsive-item" src="https://drive.google.com/file/d/1knFhvmDKsu6yWqeCib-gEL1wjDbCQkFT/preview" title="Lending Tree app Work flow diagram" allowfullscreen ></iframe>
+              </div>
             </div>
+          </div>
           <div className="mx-auto text-center col-sm-6 my-5">
             <button className="btn btn-warning btn-lg"> <NavLink to='/register' className={link}>Register Now</NavLink></button>
           </div>
