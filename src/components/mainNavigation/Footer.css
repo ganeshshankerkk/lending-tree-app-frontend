@@ -1,17 +1,20 @@
-.footerCredits{
-    color: white;
-    text-align: center;
-  }
-
-
-/* 
-.footer-style {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    margin-top: -50px;
-    width: 100%;
-   } 
-*/
+.main-footer{
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #212429;
+}
+.footer-text{
+  line-height: 0.5em;
+  color: white;
+  font-size: 13px;
+}
+.footer-text a{
+  text-decoration: none;
+  color: #2596be;
+}
+.footer-text a:hover{
+  color: #66b6d2;
+}

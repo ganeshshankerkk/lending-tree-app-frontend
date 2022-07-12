@@ -1,15 +1,18 @@
 import { Fragment } from "react";
 import './Footer.css'
-function Footer(){
-    return(
+function Footer() {
+    const currentYear = new Date().getFullYear();
+    return (
         <Fragment>
-            <div className="d-flex flex-column">
-                <div className="wrapper flex-grow-1"></div>
-                <footer>
-                    <div className="fixed-bottom nav pt-1 footer text-center bg-dark justify-content-center">
-                        <p className="footerCredits">© 2021<b> Lending Tree</b></p>
+            <div className="main-footer">
+                <div className="container">
+                    <div className="row">
+                        <div className="footer-text">
+                            <p>&copy; 2021 - {currentYear} | Lending Tree</p>
+                            <p>Developed by <a href="https://ganeshshanker.com" target="_blank" rel="noopener noreferrer"><b>Ganesh Shanker K K</b></a></p>
+                        </div>
                     </div>
-                </footer>
+                </div>
             </div>
         </Fragment>
     )

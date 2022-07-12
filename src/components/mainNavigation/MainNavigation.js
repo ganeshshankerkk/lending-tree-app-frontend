@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { RiUser6Line } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
@@ -20,7 +20,7 @@ function MainNavigation() {
     const personVerificationAgentLoggedIn = useSelector(state => state.loginState.personVerificationAgentLoggedIn);
     const legalVerificationAgentLoggedIn = useSelector(state => state.loginState.isLegalAgentLoggedIn);
     const lendingTreeAdminLogIn = useSelector(state => state.adminLoginState.isLendingTreeAdminLoggedIn);
-
+    const [hamburgerMenuIcon, setHamburgerMenuIcon] = useState(false);
     const link = "navLink";
     let dispatch = useDispatch();
 
@@ -61,46 +61,48 @@ function MainNavigation() {
     return (
         <Fragment>
             <header>
-                <nav className="navbar navbar-expand-sm navbar-dark bg-dark py-3">
-                    <div className="navbar-collapse collapse w-100 order-1 order-sm-0 dual-collapse2">
-                        <ul className="navbar-nav mr-auto mx-5">
-                            <li className="nav-item active">
-                                <NavLink className="navbar-brand" to={URI} ><FaRupeeSign/> Lending Tree</NavLink>
-                            </li>
-                        </ul>
+                <nav className="main-nav">
+                    <div className="logo">
+                        <NavLink activeclassname="navActive" className={link} to={URI} ><FaRupeeSign />Lending Tree</NavLink>
                     </div>
-                    <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
-                        <ul className="nav  ml-auto mx-5">
+                    <div className="hamburger-menu">
+                    <NavLink activeclassname="navActive" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} className="hamburger-icon" to='/' ><GiHamburgerMenu /></NavLink>
+                        {/* <a href="" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)}>
+                            <GiHamburgerMenu />
+                        </a> */}
+                    </div>
+                    <div className={hamburgerMenuIcon ? "menu-link mobile-menu-link" : "menu-link"}>
+                        <ul>
                             {/* About */}
-                            <NavLink activeclassname="navActive" to='/about' className={link}> <FaHandsHelping /> About</NavLink>
+                            <NavLink  onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} activeclassname="navActive" to='/about' className={link}> <FaHandsHelping /> About</NavLink>
                             {/* LOGIN */}
                             {!userLoggedIn && !approvalAgencyLoggedIn && !agencyAdminLoggedIn &&
                                 !pickUpAgentSignedIn && !personVerificationAgentLoggedIn && !lendingTreeAdminLogIn && !legalVerificationAgentLoggedIn &&
-                                <li className="nav-item">
-                                    <NavLink variant="pills" activeclassname="navActive" to='/login' className={link}><RiUser6Line/> Login</NavLink>
-                                </li>}
+
+                                <NavLink onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} variant="pills" activeclassname="navActive" to='/login' className={link}><RiUser6Line /> Login</NavLink>
+                            }
                             {/* DASHBOARD */}
                             {(userLoggedIn || approvalAgencyLoggedIn || agencyAdminLoggedIn || pickUpAgentSignedIn
                                 || personVerificationAgentLoggedIn || legalVerificationAgentLoggedIn || lendingTreeAdminLogIn) &&
-                                <li className="nav-item">
-                                    <NavLink activeclassname="navActive" to='/dashboard' className={link}><GiHamburgerMenu /> Dashboard</NavLink>
-                                </li>}
+
+                                <NavLink  onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} activeclassname="navActive" to='/dashboard' className={link}><GiHamburgerMenu /> Dashboard</NavLink>
+                            }
                             {/* MY ACCOUNT */}
                             {(agentLoggedInProfilePage || userLoggedIn || approvalAgencyLoggedIn || agencyAdminLoggedIn || pickUpAgentSignedIn
                                 || personVerificationAgentLoggedIn || legalVerificationAgentLoggedIn || lendingTreeAdminLogIn) &&
-                                <li className="nav-item">
-                                    <NavLink activeclassname="navActive" to='/profile' className={link}> <RiUser6Line /> My Account</NavLink>
-                                </li>}
+
+                                <NavLink  onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} activeclassname="navActive" to='/profile' className={link}> <RiUser6Line /> My Account</NavLink>
+                            }
                             {/* CONTACT */}
-                            <NavLink activeclassname="navActive" to='/contact' className={link}> <BiSupport /> Contact</NavLink>
+                            <NavLink  onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} activeclassname="navActive" to='/contact' className={link}> <BiSupport /> Contact</NavLink>
                             {/* LOGOUT */}
                             {(userLoggedIn || approvalAgencyLoggedIn || agencyAdminLoggedIn || pickUpAgentSignedIn
                                 || personVerificationAgentLoggedIn
                                 || legalVerificationAgentLoggedIn ||
                                 lendingTreeAdminLogIn) &&
-                                <li className="nav-item">
-                                    <button className="btn btn-warning" onClick={logoutHandler}>Logout</button>
-                                </li>}
+
+                                <button className="btn btn-warning" onClick={logoutHandler}>Logout</button>
+                            }
                         </ul>
                     </div>
                 </nav>
