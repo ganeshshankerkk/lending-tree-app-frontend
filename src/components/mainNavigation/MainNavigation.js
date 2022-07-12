@@ -67,7 +67,7 @@ function MainNavigation() {
                     </div>
                     <div className="hamburger-menu">
                     {/* <NavLink activeclassname="navActive" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} className="hamburger-icon" ><GiHamburgerMenu /></NavLink> */}
-                        <a href="#" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)}>
+                        <a href="#top" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)}>
                             <GiHamburgerMenu />
                         </a>
                     </div>
