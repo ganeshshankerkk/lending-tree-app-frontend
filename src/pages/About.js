@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 function About() {
   const link = "text-decoration-none text-dark";
   return (
@@ -36,7 +37,7 @@ function About() {
           </div>
         </div>
         <div className="mx-auto text-center col-sm-6 my-5">
-          <button className="btn btn-warning btn-lg"> <NavLink to='/register' className={link}>Register Now</NavLink></button>
+          <button className="btn btn-warning btn-sm"><FaHome/> <NavLink to='/' className={link}>Home</NavLink></button>
         </div>
       </div>
     </Fragment>
