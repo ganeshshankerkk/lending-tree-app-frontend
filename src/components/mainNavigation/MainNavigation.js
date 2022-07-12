@@ -66,10 +66,10 @@ function MainNavigation() {
                         <NavLink activeclassname="navActive" className={link} to={URI} ><FaRupeeSign />Lending Tree</NavLink>
                     </div>
                     <div className="hamburger-menu">
-                    <NavLink activeclassname="navActive" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} className="hamburger-icon" to='/' ><GiHamburgerMenu /></NavLink>
-                        {/* <a href="" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)}>
+                    {/* <NavLink activeclassname="navActive" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} className="hamburger-icon" ><GiHamburgerMenu /></NavLink> */}
+                        <a href="#" onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)}>
                             <GiHamburgerMenu />
-                        </a> */}
+                        </a>
                     </div>
                     <div className={hamburgerMenuIcon ? "menu-link mobile-menu-link" : "menu-link"}>
                         <ul>
@@ -78,19 +78,16 @@ function MainNavigation() {
                             {/* LOGIN */}
                             {!userLoggedIn && !approvalAgencyLoggedIn && !agencyAdminLoggedIn &&
                                 !pickUpAgentSignedIn && !personVerificationAgentLoggedIn && !lendingTreeAdminLogIn && !legalVerificationAgentLoggedIn &&
-
                                 <NavLink onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} variant="pills" activeclassname="navActive" to='/login' className={link}><RiUser6Line /> Login</NavLink>
                             }
                             {/* DASHBOARD */}
                             {(userLoggedIn || approvalAgencyLoggedIn || agencyAdminLoggedIn || pickUpAgentSignedIn
                                 || personVerificationAgentLoggedIn || legalVerificationAgentLoggedIn || lendingTreeAdminLogIn) &&
-
                                 <NavLink  onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} activeclassname="navActive" to='/dashboard' className={link}><GiHamburgerMenu /> Dashboard</NavLink>
                             }
                             {/* MY ACCOUNT */}
                             {(agentLoggedInProfilePage || userLoggedIn || approvalAgencyLoggedIn || agencyAdminLoggedIn || pickUpAgentSignedIn
                                 || personVerificationAgentLoggedIn || legalVerificationAgentLoggedIn || lendingTreeAdminLogIn) &&
-
                                 <NavLink  onClick={() => setHamburgerMenuIcon(!hamburgerMenuIcon)} activeclassname="navActive" to='/profile' className={link}> <RiUser6Line /> My Account</NavLink>
                             }
                             {/* CONTACT */}
@@ -100,7 +97,6 @@ function MainNavigation() {
                                 || personVerificationAgentLoggedIn
                                 || legalVerificationAgentLoggedIn ||
                                 lendingTreeAdminLogIn) &&
-
                                 <button className="btn btn-warning" onClick={logoutHandler}>Logout</button>
                             }
                         </ul>
