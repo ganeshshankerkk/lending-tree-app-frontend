@@ -61,8 +61,8 @@ function UserProfile() {
     return (
         <Fragment>
             <div className="row mx-auto">
-                <div className="col-lg-3 col-md col-sm-12 mr-3">
-                    <div className="col-lg-3 col-md col-sm-12">
+                <div className="col-lg-4 col-md col-sm-12 mr-3">
+                    <div className="col-lg-4 col-md col-sm-12">
                         {approvedLoans && <div className="card mt-5 mx-5 mb-5" style={{ width: '18rem' }}>
                             <img className="card-img-top" src={feedback} alt="feedback">
                             </img>
@@ -83,7 +83,7 @@ function UserProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md col-sm-12">
+                <div className="col-lg-4 col-md col-sm-12">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={loanstatus} alt="personalLoan">
                         </img>
@@ -94,7 +94,7 @@ function UserProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md col-sm-12">
+                <div className="col-lg-4 col-md col-sm-12">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={support} alt="personalLoan">
                         </img>
@@ -105,7 +105,7 @@ function UserProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md col-sm-12 pb-5">
+                <div className="col-lg-4 col-md col-sm-12 pb-5">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={ticket} alt="personalLoan">
                         </img>
