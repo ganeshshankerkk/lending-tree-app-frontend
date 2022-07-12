@@ -22,7 +22,7 @@ function LendingTreeAdminProfile() {
     return (
         <Fragment>
             <div className="row mx-auto">
-                <div className="col-lg-3 col-md col-sm-12 mr-3">
+                <div className="col-lg-4 col-md col-sm-12 mr-3">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={help} alt="helpticket">
                         </img>
@@ -33,7 +33,7 @@ function LendingTreeAdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md col-sm-12 mr-3">
+                <div className="col-lg-4 col-md col-sm-12 mr-3">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={approvedTicket} alt="helpticket">
                         </img>
@@ -44,7 +44,7 @@ function LendingTreeAdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md col-sm-12">
+                <div className="col-lg-4 col-md col-sm-12">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={feedback} alt="personalLoan">
                         </img>
@@ -55,7 +55,7 @@ function LendingTreeAdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md col-sm-12 pb-5">
+                <div className="col-lg-4 col-md col-sm-12 pb-5">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={reports} alt="personalLoan">
                         </img>

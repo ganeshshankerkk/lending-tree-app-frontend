@@ -26,7 +26,7 @@ function AdminProfile() {
     return (
         <Fragment>
             <div className="row mx-auto">
-                <div className="col-lg-2 col-md col-sm-12 mr-3">
+                <div className="col-lg-4 col-md col-sm-12 mr-3">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={newloan} alt="personalLoan">
                         </img>
@@ -37,7 +37,7 @@ function AdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-2 col-md col-sm-12">
+                <div className="col-lg-4 col-md col-sm-12">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={agent} alt="personalLoan">
                         </img>
@@ -48,7 +48,7 @@ function AdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-2 col-md col-sm-12">
+                <div className="col-lg-4 col-md col-sm-12">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={verified} alt="personalLoan">
                         </img>
@@ -59,7 +59,7 @@ function AdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-2 col-md col-sm-12">
+                <div className="col-lg-4 col-md col-sm-12">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={legal} alt="personalLoan">
                         </img>
@@ -70,7 +70,7 @@ function AdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-2 col-md col-sm-12 pb-5">
+                <div className="col-lg-4 col-md col-sm-12 pb-5">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={dropped} alt="personalLoan">
                         </img>
