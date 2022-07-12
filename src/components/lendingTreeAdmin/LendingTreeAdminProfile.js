@@ -55,7 +55,7 @@ function LendingTreeAdminProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md col-sm-12">
+                <div className="col-lg-3 col-md col-sm-12 pb-5">
                     <div className="card mt-5 mx-5" style={{ width: '18rem' }}>
                         <img className="card-img-top" src={reports} alt="personalLoan">
                         </img>
