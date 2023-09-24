@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 
 function AvailableLegalVerificationAgents(){
-    const URI = "https://lending-tree-app.herokuapp.com";
+    const URI = "lending-tree.up.railway.app";
     const dispatch = useDispatch();
     let history = useHistory();
     let [verificationAgent, setLegalVerificationAgent] = useState(false);

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { FaArrowCircleRight } from 'react-icons/fa';
 import { useHistory } from "react-router-dom";
 function AdminLogin() {
-    const URI = "https://lending-tree-app.herokuapp.com";
+    const URI = "lending-tree.up.railway.app";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>

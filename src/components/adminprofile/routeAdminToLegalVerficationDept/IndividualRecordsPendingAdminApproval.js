@@ -9,7 +9,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import AvailableLegalVerificationAgents from "./AvailableLegalVerificationAgents";
 
 function IndividualRecordsPendingAdminApproval() {
-    const URI = "https://lending-tree-app.herokuapp.com";
+    const URI = "lending-tree.up.railway.app";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);

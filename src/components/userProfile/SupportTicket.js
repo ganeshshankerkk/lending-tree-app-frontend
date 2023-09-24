@@ -5,7 +5,7 @@ import { GiTicket } from "react-icons/gi";
 import { useDispatch, useSelector } from "react-redux";
 import { loadingActions } from "../../store/loadingSlice";
 function SupportTicket() {
-    const URI = "https://lending-tree-app.herokuapp.com";
+    const URI = "lending-tree.up.railway.app";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     const dispatch = useDispatch();
     const loadingData = useSelector(state => state.loadingState.isLoading);

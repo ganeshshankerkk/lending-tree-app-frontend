@@ -7,7 +7,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import { loanReportActions } from "../../../store/loanReportSlice";
 
 function NewLoans(){
-    const URI = "https://lending-tree-app.herokuapp.com";
+    const URI = "lending-tree.up.railway.app";
     const dispatch = useDispatch();
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2','#F6D6F6','#DCEBFF','#FFF2E2','#F5E5E4','#FAF5EF','#ECECEC'];
     let [newLoanCount, setNewLoanCound] = useState(false);
