@@ -7,7 +7,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import { filterTicketDataActions } from "../../../store/filterTicketDataSlice";
 
 function AllResolvedTickets() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     const dispatch = useDispatch();
     let [ticketCount, setTicketCount] = useState(false);
     const [resolvedTickets, setResolvedTickets] = useState([]);

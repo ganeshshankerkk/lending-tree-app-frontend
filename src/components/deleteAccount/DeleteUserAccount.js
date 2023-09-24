@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loginActions } from "../../store/loginSlice";
 
 function DeleteUserAccount() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     let history = useHistory();
     let dispatch = useDispatch();
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);

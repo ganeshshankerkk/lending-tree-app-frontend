@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterFeedbackActions } from "../../store/filterFeedbackSlice";
 
 function UserProfile() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     let dispatch = useDispatch();
     let [approvedLoans, setApprovedLoans] = useState(false);

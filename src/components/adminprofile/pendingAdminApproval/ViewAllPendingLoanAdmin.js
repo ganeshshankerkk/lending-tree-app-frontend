@@ -7,7 +7,7 @@ import { filterAppAgencyLoanActions } from "../../../store/filterApprovalAgencyA
 import { loadingActions } from "../../../store/loadingSlice";
 
 function ViewAllPendingLoanAdmin() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     const dispatch = useDispatch();
     let [pendingApprovalRequest, setPendingApprovalRequest] = useState(false);
     const [pendingLoanDetails, setPendingLoanDetails] = useState([]);

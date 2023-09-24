@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
 function AgentRegistration() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     let history= useHistory();
     const [idisValid, setIdIsValid] = useState(false);
     const [emailIsValid, setEmailIsValid] = useState(false);

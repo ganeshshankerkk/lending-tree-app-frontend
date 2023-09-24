@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { ImArrowLeft2 } from "react-icons/im";
 
 function AgentForgotPassword() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>

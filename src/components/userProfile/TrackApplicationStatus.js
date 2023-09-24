@@ -8,7 +8,7 @@ import { FaRegLaugh } from "react-icons/fa";
 import { loadingActions } from "../../store/loadingSlice";
 
 function TrackApplicationStatus() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     const link = "text-decoration-none";
     const dispatch = useDispatch();
     let [appliedLoans, setAppliedLoans] = useState(false);

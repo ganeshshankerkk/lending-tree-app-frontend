@@ -6,7 +6,7 @@ import { BsCardList } from "react-icons/bs";
 import { loadingActions } from "../../store/loadingSlice";
 import { filterTicketActions } from "../../store/filterTicketSlice";
 function SupportTicketStatus() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     const dispatch = useDispatch();
     let [ticketCount, setTicketCount] = useState(false);
     const [pendingTickets, setPendingTickets] = useState([]);

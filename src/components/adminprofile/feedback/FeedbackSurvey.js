@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 function FeedbackSurvey() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     const pendingFeedbackData =  useSelector(state => state.filterFeedback.filteredFeedback);
     const loanId = pendingFeedbackData.map((loan) => {
         return loan.loanid;

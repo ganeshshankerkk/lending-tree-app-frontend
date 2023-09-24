@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 function AvailablePickUpAgents() {
     const dispatch = useDispatch();
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     let history = useHistory();
     let [availablePickUpAgent, setAvailablePickUpAgent] = useState(false);
     const [agentRecords, setAgentRecords] = useState([]);

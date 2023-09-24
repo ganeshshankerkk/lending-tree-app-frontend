@@ -8,7 +8,7 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import { loadingActions } from "../../store/loadingSlice";
 function FilteredPersonVerificationRequest() {
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     let history = useHistory();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
     const filteredLoanDataById = useSelector(state => state.filterLoan.filteredLoanDataById);

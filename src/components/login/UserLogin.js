@@ -8,7 +8,7 @@ import { loginActions } from "../../store/loginSlice";
 function UserLogin() {
     let history = useHistory();
     let dispatch = useDispatch();
-    const URI = "lending-tree.up.railway.app";
+    const URI = "https://lending-tree.up.railway.app";
     const loadingData = useSelector(state => state.loadingState.isLoading);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
