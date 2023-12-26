@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loginActions } from "../../store/loginSlice";
 
 function DeleteAgentAccount() {
-    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
+    const URI = "https://lending-tree.up.railway.app";
     let history = useHistory();
     let dispatch = useDispatch();
     const agentid = useSelector(state => state.loginState.loggedAgentRecord.id);

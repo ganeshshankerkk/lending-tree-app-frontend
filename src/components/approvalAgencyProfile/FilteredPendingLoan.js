@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 function FilteredPendingLoan() {
-    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
+    const URI = "https://lending-tree.up.railway.app";
     let history = useHistory();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);
     const filteredLoanDataById = useSelector(state => state.filterLoan.filteredLoanDataById);

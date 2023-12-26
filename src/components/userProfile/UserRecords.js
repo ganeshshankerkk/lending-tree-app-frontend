@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RiUser6Line } from 'react-icons/ri';
 import DeleteUserAccount from "../deleteAccount/DeleteUserAccount";
 function UserRecords() {
-    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
+    const URI = "https://lending-tree.up.railway.app";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     const [fullRecords, setUserRecords] = useState({});
 

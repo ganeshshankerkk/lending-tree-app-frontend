@@ -9,7 +9,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import AvailableLegalVerificationAgents from "./AvailableLegalVerificationAgents";
 
 function IndividualRecordsPendingAdminApproval() {
-    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
+    const URI = "https://lending-tree.up.railway.app";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);

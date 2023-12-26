@@ -5,7 +5,7 @@ import { GiTicket } from "react-icons/gi";
 import { useDispatch, useSelector } from "react-redux";
 import { loadingActions } from "../../store/loadingSlice";
 function SupportTicket() {
-    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
+    const URI = "https://lending-tree.up.railway.app";
     const userid = useSelector(state => state.loginState.loggedUserRecords.givenId);
     const dispatch = useDispatch();
     const loadingData = useSelector(state => state.loadingState.isLoading);
