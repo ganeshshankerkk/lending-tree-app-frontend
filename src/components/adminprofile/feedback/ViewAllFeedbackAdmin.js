@@ -8,7 +8,7 @@ import { feedbackActions } from "../../../store/adminFeedbackSlice";
 
 function ViewAllFeedbackAdmin() {
     const dispatch = useDispatch();
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     let [feedbackCount, setFeedbackCount] = useState(false);
     const [feedbackRecords, setFeedbackRecords] = useState([]);
     const loadingData = useSelector(state => state.loadingState.isLoading);

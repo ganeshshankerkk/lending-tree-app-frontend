@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../store/loadingSlice";
 function LoanApplicationForm() {
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const userId = useSelector(state => state.loginState.loggedUserRecords.givenId);

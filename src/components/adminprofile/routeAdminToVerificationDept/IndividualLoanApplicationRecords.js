@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { loadingActions } from "../../../store/loadingSlice";
 import AvailableVerificationDeptAgents from "./AvailableVerificationDeptAgents";
 function IndividualLoanApplicationRecords() {
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);

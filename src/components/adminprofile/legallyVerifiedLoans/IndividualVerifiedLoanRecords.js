@@ -7,7 +7,7 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import { loadingActions } from "../../../store/loadingSlice";
 function IndividualVerifiedLoanRecords() {
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     let history = useHistory();
     let dispatch = useDispatch();
     const [isRejectingLoan, setIsRejectingLoan] = useState(false);

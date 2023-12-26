@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import './UserRegistration.css'
 
 function UserRegistration() {
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm({
         mode: "onBlur"

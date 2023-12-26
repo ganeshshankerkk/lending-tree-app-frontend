@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 
 function AvailableLegalVerificationAgents(){
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     const dispatch = useDispatch();
     let history = useHistory();
     let [verificationAgent, setLegalVerificationAgent] = useState(false);

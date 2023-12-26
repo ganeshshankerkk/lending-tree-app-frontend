@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { useForm } from 'react-hook-form';
 import { Link } from "react-router-dom";
 function UserForgotId() {
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>
     const [userId, setUserId] = useState();

@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadingActions } from "../../../store/loadingSlice";
 function AvailablePickUpAgents() {
     const dispatch = useDispatch();
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     let history = useHistory();
     let [availablePickUpAgent, setAvailablePickUpAgent] = useState(false);
     const [agentRecords, setAgentRecords] = useState([]);

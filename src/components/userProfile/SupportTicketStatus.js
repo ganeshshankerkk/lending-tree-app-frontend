@@ -6,7 +6,7 @@ import { BsCardList } from "react-icons/bs";
 import { loadingActions } from "../../store/loadingSlice";
 import { filterTicketActions } from "../../store/filterTicketSlice";
 function SupportTicketStatus() {
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     const dispatch = useDispatch();
     let [ticketCount, setTicketCount] = useState(false);
     const [pendingTickets, setPendingTickets] = useState([]);

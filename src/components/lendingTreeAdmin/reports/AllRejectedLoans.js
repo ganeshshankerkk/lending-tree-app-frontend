@@ -7,7 +7,7 @@ import { loadingActions } from "../../../store/loadingSlice";
 import { rejectedLoanActions } from "../../../store/rejectedLoanSlice";
 
 function AllRejectedLoans(){
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     const dispatch = useDispatch();
     const bgColor = ['#Ffe6e2', '#Dbf6fe', '#Feeaf1', '#f0f1f2','#F6D6F6','#DCEBFF','#FFF2E2','#F5E5E4','#FAF5EF','#ECECEC'];
     let [rejectedLoanCount, setRejectedLoanCount] = useState(false);

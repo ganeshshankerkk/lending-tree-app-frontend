@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { FaArrowCircleRight } from 'react-icons/fa';
 import { useHistory } from "react-router-dom";
 function AdminLogin() {
-    const URI = "https://lending-tree.up.railway.app";
+    const URI = "http://qr-code.ap-south-1.elasticbeanstalk.com";
     let history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const required = <span className="text-danger">*</span>
